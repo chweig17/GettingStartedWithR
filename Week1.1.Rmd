@@ -9,34 +9,50 @@ This week, we're working on GSWR Chapter 2 on importing data and examining it wi
 
 Set up the workspace. Clear the workspace and load the dplyr and ggplot packages.
 ```{r}
-
+rm(list = ls())
+library(readr)
+library(dplyr)
+library(ggplot2)
 ```
 Navigate to the folder Cole and use the "read.csv" function to load the dataset called "Cam_Use_Date.csv". Name the dataframe "DF".
 
 ```{r}
-
+DF<- read.csv("~/R/Datasets/Cam_Use_Date.csv")
 ```
 How many rows of data?  How many variables?
+There are 100 rows/observations and 8 variables
 
 Which variables come in as integers? characters? factors? dates? numerics?
+CamNum and round are integeres, SDcard, date out, date checked, use end date, forest, and notes are characters. 
 
 Now load the same dataset again, but this time, use the following code: 
 ```{r}
-
-#DF1<- read.csv(putfilepathhere, stringsAsFactors = T)
+DF1<- read.csv("~/R/Datasets/Cam_Use_Date.csv", stringsAsFactors = T)
 ```
 How did this change the structure of your data frame?
+the stringsasfactors command changed the dataset so that anywhere with a string of characters was change to a factor. 
 
 Use the names(), head(), dim(), and str() functions to examine DF.  What do you learn from each?
 
-```{r}
+names() gives the names of the columns/variables
+head() gives the first 6 observations in all rows
+dim() gives the dimensions of the dataframe (100 rows and 8 columns)
+str() gives the structure of the dataframe; it shows the rows and first few observations in each, along with the type of variable each column is (int, factor, character, num, etc.)
 
+```{r}
+names(DF1)
+head(DF1)
+dim(DF1)
+str(DF1)
 ```
 
 Now load the dplyr package, if it isn't loaded already, and use it to run the glimpse() and tbl_df() functions.  What do these do?  How is their output similar to /different from the other functions you've used thus far?
 
+It seems that glimpse() gives the same information that str() does, but it looks a bit easier to read
+tbl_df() generated a table of the data, which makes it very easy to read. It's similar to the head() but is in table format which is nice. 
 ```{r}
-
+glimpse(DF1)
+tbl_df(DF1)
 ```
 
 
