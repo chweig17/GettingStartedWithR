@@ -42,7 +42,7 @@ DF$Class[(N)] <- "NA"
 I had a lot of trouble trying to figure out how to do this code (was overthinking it maybe?)
 Other ways to do it?
 
-Now use `filter` and `group_by` to summarize the number of birds and mammals observed, respectively, by round.
+Now use `filter` and `group_by` to summarize the number of birds and mammals observed, respectively, by round. 
 
 ```{r}
 BirdByRounds<- DF %>%
