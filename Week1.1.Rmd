@@ -46,7 +46,7 @@ dim(DF1)
 str(DF1)
 ```
 
-Now load the dplyr package, if it isn't loaded already, and use it to run the glimpse() and tbl_df() functions.  What do these do?  How is their output similar to /different from the other functions you've used thus far?
+Now load the dplyr package, if it isn't loaded already, and use it to run the glimpse() and tbl_df() functions.  What do these do?  How is their output similar to /different from the other functions you've used thus far? 
 
 It seems that glimpse() gives the same information that str() does, but it looks a bit easier to read
 tbl_df() generated a table of the data, which makes it very easy to read. It's similar to the head() but is in table format which is nice. 
