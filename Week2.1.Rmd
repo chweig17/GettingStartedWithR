@@ -76,7 +76,7 @@ DF4<- summarize(
   group_by(DF, round),
   count=n()
 )
-
+ 
 DF5<-DF %>%
   group_by(round) %>%
   summarize(count=n())
